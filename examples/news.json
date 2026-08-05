@@ -1,0 +1,92 @@
+{
+  "home": "Milan",
+  "away": "Inter",
+  "match_date": "2026-08-05",
+  "competition": null,
+  "events": [
+    {
+      "headline": "AC Milan pubblica la lista dei convocati per la tournée: alcuni big arriveranno direttamente in Australia",
+      "summary": "Il 26 luglio AC Milan ha pubblicato la lista dei giocatori convocati per la tournée in Australia e Indonesia, precisando che De Winter, Jashari, Rafael Leão, Luka Modrić, Gonçalo Ramos e Alexis Saelemaekers si uniranno al gruppo nei giorni successivi direttamente a Perth.",
+      "team": "home",
+      "type": "tactical_hint",
+      "subject": "AC Milan (comunicato ufficiale)",
+      "quote": null,
+      "potential_impact": "Indica priorità di gestione del minutaggio e possibili scelte di rotazione per l'amichevole; segnala chi arriverà in ritardo e quindi chi potrà essere valutato solo sul posto.",
+      "impact_level": "medium",
+      "information_status": "confirmed",
+      "published_at": "2026-07-26",
+      "source": "AC Milan (sito ufficiale)",
+      "url": "https://www.acmilan.com/it/news/articoli/tournee/2026-07-26/pre-season-tour-2026-i-rossoneri-convocati"
+    },
+    {
+      "headline": "Problema logistico nello scalo: Milan arriva a Perth dopo un contrattempo a Dubai",
+      "summary": "Notizie di club-media (27 luglio) riportano che il Milan è atterrato a Perth il 27 luglio dopo un 'contrattempo' durante lo scalo a Dubai; il pezzo elenca inoltre i convocati presenti e conferma che alcuni nazionali arriveranno in giorni successivi.",
+      "team": "home",
+      "type": "logistics",
+      "subject": "AC Milan / trasferimento tournée",
+      "quote": "\"Partito ieri pomeriggio da Milano-Malpensa, il Milan - dopo uno scalo logistico a Dubai (EAU) - è arrivato a Perth (Western Australia)\".",
+      "potential_impact": "Un imprevisto nello scalo può ridurre tempo di acclimatamento o preparazione per alcuni giocatori; utile per valutare eventuali limitazioni nella seduta pre-match.",
+      "impact_level": "low",
+      "information_status": "confirmed",
+      "published_at": "2026-07-27",
+      "source": "MilanNews24",
+      "url": "https://www.milannews24.com/milan-atterrato-perth-inizia-tourne-estiva/"
+    },
+    {
+      "headline": "Amorim (Milan) in conferenza da Perth: tributo a Baresi, parole su Leão, Modrić e gestione del carico",
+      "summary": "In conferenza stampa alla vigilia del derby di Perth (articolo del 4 agosto) Rúben Amorim ha citato la scomparsa di Franco Baresi e ha ribadito che la squadra deve preservare lo spirito collettivo; ha parlato del futuro di Rafael Leão (\"non so cosa succederà da qui alla fine del mercato\"), ha definito Modrić \"umile\" e ha detto che gestiranno il carico di lavoro in vista delle partite ravvicinate.",
+      "team": "home",
+      "type": "statement",
+      "subject": "Rúben Amorim (allenatore AC Milan)",
+      "quote": "\"Io sento che il gruppo è davvero unito. Non so cosa succederà da qui alla fine del mercato, ma sento che il gruppo è davvero unito.\"",
+      "potential_impact": "Dichiarazioni pubbliche che toccano motivazione, gestione del carico e mercato: utili per interpretare priorità tecniche (gestione minuti per Modrić/Leão) e il clima emotivo dopo la scomparsa di una leggenda del club.",
+      "impact_level": "medium",
+      "information_status": "confirmed",
+      "published_at": "2026-08-04T09:00:00+02:00",
+      "source": "PianetaMilan (report conferenza stampa, raccolto dall'inviato a Perth)",
+      "url": "https://www.pianetamilan.it/news-milan/conferenze-stampa/milan-conferenza-stampa-amorim-le-parole-su-baresi-leao-mercato-modric-e-derby/"
+    },
+    {
+      "headline": "Chivu (Inter) in conferenza da Perth: 'I trofei d'agosto non contano', allarme sui reduci dal Mondiale e proposta di spostare gare all'estero",
+      "summary": "Alla vigilia del derby l'allenatore dell'Inter Cristian Chivu (conferenza riportata il 4 agosto) ha minimizzato l'importanza dei trofei estivi (\"i trofei d'agosto non contano niente\"), ha espresso dubbi sulla prontezza atletica dei giocatori reduci dai Mondiali e ha proposto l'idea (pubblica) di giocare la prima giornata di campionato all'estero per ridurre impatti logistici, citando un paragone con il Tour de France.",
+      "team": "away",
+      "type": "statement",
+      "subject": "Cristian Chivu (allenatore Inter)",
+      "quote": "\"Questa è una domanda per i tifosi... i trofei d'agosto non contano niente.\"",
+      "potential_impact": "Dichiarazioni che segnalano preoccupazioni sulla condizione fisica dei nazionali (potenziale rischio di fatica) e avviano pubblicamente un dibattito su calendario e logistica (proposta di far giocare la prima giornata all'estero).",
+      "impact_level": "medium",
+      "information_status": "confirmed",
+      "published_at": "2026-08-04T19:01:00+02:00",
+      "source": "PianetaMilan (report conferenza stampa da Perth)",
+      "url": "https://www.pianetamilan.it/news-milan/conferenze-stampa/inter-chivu-in-conferenza-stampa-da-perth-il-derby-contro-il-milan-e-i-nazionali/"
+    },
+    {
+      "headline": "Funerali di Franco Baresi e contestazione ai dirigenti: Cardinale e Scaroni accolti da fischi",
+      "summary": "Nei giorni immediatamente precedenti la gara (articoli del 4 agosto), la cerimonia in memoria di Franco Baresi è stata accompagnata da momenti di tensione: la presenza di figure dirigenziali (tra cui Gerry Cardinale e Paolo Scaroni) è stata accolta da fischi da parte di alcuni tifosi, episodio riportato dai media locali e citato nelle cronache della vigilia.",
+      "team": "home",
+      "type": "fan_event",
+      "subject": "Tifosi del Milan / dirigenti (Gerry Cardinale, Paolo Scaroni)",
+      "quote": "\"Cardinale e Scaroni accolti dai fischi\" (resoconto media locale).",
+      "potential_impact": "Contestazioni pubbliche verso la proprietà/dirigenza possono influire sul clima sociale attorno al club, sull'umore dei giocatori e sulla percezione del management in vista della partita.",
+      "impact_level": "medium",
+      "information_status": "reported",
+      "published_at": "2026-08-04",
+      "source": "PianetaMilan (articoli e cronache dalla vigilia)",
+      "url": "https://www.pianetamilan.it/news-milan/conferenze-stampa/milan-conferenza-stampa-amorim-le-parole-su-baresi-leao-mercato-modric-e-derby/"
+    },
+    {
+      "headline": "Scomparsa di Franco Baresi e riflesso emotivo nel gruppo Milan alla vigilia del derby",
+      "summary": "I media che seguono la tournée (4 agosto) riportano la notizia della scomparsa di Franco Baresi e indicano che il club e lo staff (in conferenza Amorim ha più volte richiamato il ricordo) stanno vivendo un momento di lutto: il tema è stato toccato pubblicamente in conferenza dallo staff del Milan.",
+      "team": "home",
+      "type": "other",
+      "subject": "Franco Baresi / AC Milan",
+      "quote": "\"Prima di tutto le nostre condoglianze alla famiglia di Baresi... Franco era tutto per la squadra.\" (dichiarazione riportata in conferenza da Rúben Amorim).",
+      "potential_impact": "Evento emotivo di grande rilievo per il club che può avere un impatto sulla concentrazione, sul morale e sulla gestione simbolica della partita; citato pubblicamente dallo staff tecnico.",
+      "impact_level": "high",
+      "information_status": "confirmed",
+      "published_at": "2026-08-04",
+      "source": "PianetaMilan (resoconto conferenza e articoli della vigilia)",
+      "url": "https://www.pianetamilan.it/news-milan/conferenze-stampa/milan-conferenza-stampa-amorim-le-parole-su-baresi-leao-mercato-modric-e-derby/"
+    }
+  ]
+}

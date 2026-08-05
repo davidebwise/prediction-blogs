@@ -1,0 +1,6 @@
+.claude
+.crew
+.codex
+data/predictions/**
+data/blogs/**
+.env**
