@@ -5,37 +5,74 @@ Recibes como entrada un objeto JSON generado por un sistema de predicción de f�
 - `notes`: anotaciones técnicas sobre el sistema, que debes ignorar por completo.
 - `1x2`, `overUnder25`, `btts`: para cada mercado, un conjunto de `signals`, cada uno con `value`, `reliability` y `reason`, además de un `score` y `probabilities`.
 
-Escribe un artículo para un blog deportivo en **español chileno**, cuyo foco principal sean los pronósticos para los tres mercados: **1X2, Más/Menos de 2,5 goles y Ambos Equipos Marcan (BTTS)**. El artículo debe presentar una opinión o predicción propia para cada mercado, fundamentada en los datos objetivos disponibles, y no limitarse a resumir el contexto general del partido.
+Escribe una previa de apuestas en **español chileno**, pensada primero para lectores de celular. La decisión de apuesta debe poder entenderse sin abrir el análisis completo.
 
-Reglas obligatorias:
+## Reglas sobre los datos
 
-1. **Escribe siempre en español chileno**, con un tono natural, fluido y reconocible para lectores de Chile. Puedes usar expresiones habituales del periodismo deportivo chileno, pero sin exagerar los modismos, caer en caricaturas ni usar lenguaje excesivamente informal.
+1. Escribe siempre en español chileno, con un tono natural, ágil y analítico. Puedes usar expresiones habituales del periodismo deportivo chileno, sin exagerar los modismos ni caer en un registro informal.
 
-2. **No menciones nunca** los campos calculados por el sistema: `score`, `probabilities`, `value`, `reliability`, `weights` ni `legend`. Tampoco incluyas porcentajes, puntajes numéricos o frases que reproduzcan directamente los resultados calculados. El pronóstico debe ser una evaluación discursiva propia, construida a partir de los antecedentes objetivos, y no una paráfrasis de cifras ya procesadas.
+2. No menciones nunca los campos calculados por el sistema: `score`, `probabilities`, `value`, `reliability`, `weights` ni `legend`. Tampoco incluyas porcentajes, puntajes numéricos o frases que reproduzcan directamente los resultados calculados.
 
-3. **Usa únicamente datos objetivos** presentes en los campos `reason` de cada señal, como promedios de goles anotados o recibidos en los últimos cinco partidos, cuotas de mercado mencionadas como información factual, posición en la tabla, jugadores en buen momento incluidos o excluidos de la convocatoria, formaciones e información sobre lesionados. También puedes utilizar los datos del campo `match`, como equipos, entrenadores, competición y fecha.
+3. Usa únicamente datos objetivos presentes en los campos `reason` de cada señal, como promedios de goles anotados o recibidos, cuotas de mercado, posición en la tabla, jugadores incluidos o excluidos de la convocatoria, formaciones e información sobre lesionados. También puedes utilizar los datos de `match`, como equipos, entrenadores, competición y fecha.
 
-4. Cuando el campo `reason` de una señal `lineup` mencione nombres de jugadores, por ejemplo goleadores en buen momento presentes o ausentes de la convocatoria, o lesionados que todavía aparecen incluidos, **menciona esos nombres en el artículo cuando sean relevantes para justificar el pronóstico de un mercado concreto**. No los incluyas cuando no aporten al análisis o cuando la información sea ambigua o incompleta.
+4. Cuando `lineup.reason` mencione jugadores, incluye sus nombres solo si aportan directamente a la justificación de ese mercado y la información no es ambigua.
 
-5. Si un dato está ausente, es nulo, tiene `value: null`, `reliability: 0` o su `reason` indica que la información no está disponible, no fue publicada o no existe cotización, **omite por completo ese antecedente**. No señales que falta información ni escribas frases como “no hay datos disponibles”. Simplemente continúa como si ese dato no existiera.
+5. Si un dato está ausente, es nulo, tiene `value: null`, `reliability: 0` o su `reason` indica que la información no está disponible, no fue publicada o no existe cotización, omítelo por completo. No menciones la falta del dato.
 
-6. Si para un mercado completo no quedan suficientes antecedentes objetivos y válidos para construir un pronóstico razonado, omite la sección correspondiente sin explicarlo ni mencionar la falta de información.
+6. Si para un mercado completo no quedan al menos dos antecedentes objetivos y válidos para construir un pronóstico razonado, omite la card correspondiente sin explicarlo.
 
-7. **No inventes nada.** Utiliza exclusivamente la información que pueda extraerse literalmente de los campos permitidos: `match` y los `reason` que contengan datos válidos. No agregues estadísticas, declaraciones, rumores, antecedentes históricos, enfrentamientos previos, nombres de jugadores, lesiones, anécdotas ni ningún otro detalle que no esté presente en esos campos.
+7. No inventes estadísticas, resultados posibles, declaraciones, rumores, antecedentes históricos, nombres, lesiones ni detalles que no estén literalmente disponibles en `match` o en un `reason` válido.
 
-8. Si los antecedentes disponibles no alcanzan para elaborar un análisis extenso, escribe un artículo más breve. Nunca rellenes vacíos con información inventada o suposiciones presentadas como hechos.
+8. No menciones el JSON, el modelo, el algoritmo, las señales, las ponderaciones ni el sistema de predicción.
 
-9. No menciones que la información proviene de un JSON, un modelo, un algoritmo, señales, ponderaciones o un sistema de predicción. Escribe como un periodista y pronosticador deportivo que presenta su propio análisis.
+## Estructura de salida obligatoria
 
-10. Organiza el artículo con la siguiente estructura:
+Devuelve únicamente contenido listo para guardar en un archivo Markdown. No envuelvas la respuesta en bloques de código. Usa exactamente este orden:
 
-- Un título atractivo y claramente orientado al pronóstico.
-- Una introducción breve que mencione a los equipos, la competición y la fecha.
-- Una sección dedicada al mercado 1X2.
-- Una sección dedicada al mercado Más/Menos de 2,5 goles.
-- Una sección dedicada al mercado Ambos Equipos Marcan, también llamado BTTS.
-- Un cierre que resuma la visión general del partido y las apuestas sugeridas.
+1. Un título `#` breve, específico y orientado al pronóstico.
+2. Una introducción de un solo párrafo y un máximo de 45 palabras, con equipos, competición y fecha.
+3. Una card HTML por cada mercado que tenga suficientes antecedentes, en este orden: 1X2, Más/Menos de 2,5 goles y Ambos Equipos Marcan (BTTS).
+4. No agregues un cierre, resumen final ni contenido después de la última card: las cards ya cumplen esa función.
 
-11. En cada sección debes indicar con claridad cuál es tu pronóstico y justificarlo mediante los antecedentes objetivos pertinentes. El centro del artículo debe ser la decisión de apuesta para cada mercado, no una descripción genérica del encuentro.
+Cada card debe respetar exactamente esta estructura semántica:
 
-12. Usa un tono periodístico propio de un pronosticador deportivo chileno: claro, seguro, ágil y analítico. La extensión final debe estar entre **300 y 500 palabras**, salvo que la falta de antecedentes válidos obligue a escribir un texto más corto.
+```html
+<section class="prediction-card" data-market="1x2">
+  <header class="prediction-card__header">
+    <h2>1X2</h2>
+    <p class="prediction-card__pick"><strong>[pick concreto]</strong></p>
+    <p class="prediction-card__confidence"><em>Confianza: [Alta, Media-alta, Media o Baja]</em></p>
+  </header>
+  <ul class="prediction-card__signals">
+    <li>✓ [señal clave breve]</li>
+    <li>✓ [señal clave breve]</li>
+    <li>✓ [señal clave breve, solo si aporta]</li>
+  </ul>
+  <p class="prediction-card__risk"><strong>⚠ Riesgo:</strong> [principal factor que podría invalidar el pick]</p>
+  <details class="prediction-card__details">
+    <summary>Ver análisis completo</summary>
+    <p>[razonamiento completo en uno o dos párrafos breves]</p>
+  </details>
+</section>
+```
+
+- Para las otras cards usa `data-market="over-under-25"` con `<h2>Más/Menos de 2,5 goles</h2>` y `data-market="btts"` con `<h2>Ambos Equipos Marcan (BTTS)</h2>`.
+- El `pick concreto` debe decir de inmediato qué apostar, por ejemplo `Gana Flamengo`, `Empate`, `Más de 2,5 goles` o `Ambos equipos marcan: No`. No lo introduzcas con una oración de relleno.
+- Define la confianza de forma editorial según la cantidad, calidad y coherencia de los antecedentes disponibles. No la acompañes de porcentajes ni inventes una precisión numérica.
+- Incluye dos o tres señales clave, cada una de una sola oración y con un máximo de 12 palabras. No repitas la misma estadística en varias señales de la misma card.
+- El riesgo debe ser específico, estar respaldado por los datos válidos y ocupar una sola oración. No inventes un riesgo solo para llenar el campo: si los datos no muestran uno claro, escribe `Los antecedentes disponibles no descartan un desarrollo más parejo.`
+- El análisis completo debe desarrollar las señales sin copiar literalmente la lista. Usa uno o dos párrafos, con un máximo total de 100 palabras por card.
+- Mantén las etiquetas HTML, las clases, el orden de los elementos y los textos `Confianza:`, `⚠ Riesgo:` y `Ver análisis completo` exactamente como aparecen. No uses estilos inline, tablas ni bloques HTML adicionales.
+
+## Variedad editorial obligatoria
+
+La estructura visual debe ser consistente; la redacción no. Evita plantillas verbales repetidas entre mercados y artículos.
+
+- No escribas en ninguna parte estas fórmulas ni variantes cercanas: `La recomendación es`, `La recomendación principal es`, `Mi apuesta principal es`, `La apuesta principal es`, `La visión general es`, `La lectura general es`, `El pronóstico es`, `Mi pronóstico es`, `La sugerencia es`, `La apuesta sugerida es`.
+- No abras el análisis explicando que vas a recomendar o pronosticar. Comienza directamente con el argumento más determinante: la forma, la tabla, la producción goleadora, las cuotas, la convocatoria o el descanso.
+- Alterna de manera natural el ritmo y la construcción de las frases. No uses la misma apertura en dos cards del mismo artículo.
+- Evita repetir una conclusión que ya aparece en el pick. Cada frase debe añadir evidencia, matiz o riesgo.
+- No uses marcadores mecánicos como `En resumen`, `Por todo lo anterior`, `En conclusión` o `En definitiva`.
+- Prefiere afirmaciones concretas sobre los equipos y los datos antes que frases editoriales vacías como `todo apunta a`, `la balanza se inclina` o `aparece como una opción atractiva`.
+
+La extensión total, incluyendo el contenido cerrado de las cards, debe quedar entre 180 y 320 palabras. Si hay pocos antecedentes válidos, escribe menos: nunca rellenes vacíos ni alargues el texto por alcanzar el mínimo.

@@ -3,4 +3,6 @@
 .codex
 data/predictions/**
 data/blogs/**
+data/news/**
 .env**
+package-lock.json

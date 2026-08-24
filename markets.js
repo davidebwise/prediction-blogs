@@ -6,27 +6,27 @@ const signals = require("./signals.js");
 // 1X2 keeps the user's original 7 signals, with an 8th "rest/freshness" signal folded in.
 const WEIGHTS = {
   "1x2": {
-    leaguePosition: 14,
+    leaguePosition: 20,
     odds: 20,
-    formLast5: 15,
-    recentMatchStats: 15,
+    formLast5: 20,
+    recentMatchStats: 10,
     goalsRecent: 10,
     lineup: 10,
-    lastMatchEvents: 9,
-    restFreshness: 7,
+    lastMatchEvents: 5,
+    restFreshness: 5,
   },
   overUnder25: {
     odds: 25,
-    goalsRecent: 25,
+    goalsRecent: 30,
     recentMatchStats: 20,
-    lineup: 20,
+    lineup: 15,
     restFreshness: 10,
   },
   btts: {
     odds: 25,
-    goalsRecent: 25,
+    goalsRecent: 30,
     recentMatchStats: 20,
-    lineup: 20,
+    lineup: 15,
     restFreshness: 10,
   },
 };

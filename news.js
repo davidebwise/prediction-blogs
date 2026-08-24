@@ -33,7 +33,7 @@ async function getPreMatchContext({
       },
     ],
     // max_output_tokens: 6000,
-    reasoning: { effort: "medium" },
+    reasoning: { effort: "low" },
     tool_choice: "required",
     input: `
 Analizza esclusivamente il contesto qualitativo pre-match della partita:
@@ -48,7 +48,9 @@ OBIETTIVO
 Cerca notizie, dichiarazioni ed eventi rilevanti che normalmente NON sono
 presenti nelle API sportive strutturate.
 
-INCLUDI SOLTANTO:
+Cerca notizie pre-match.
+Se trovi una qualsiasi delle seguenti categorie, riportala.
+NON cercare individualmente ogni categoria.
 
 - dichiarazioni pre-partita di allenatori, giocatori e dirigenti;
 - conferenze stampa e interviste;

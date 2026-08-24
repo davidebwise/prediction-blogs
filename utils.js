@@ -21,4 +21,27 @@ function daysBetween(dateA, dateB) {
   return Math.abs(new Date(dateA) - new Date(dateB)) / msPerDay;
 }
 
-module.exports = { clamp, average, relativeAdvantage, daysBetween };
+const CHILE_TIME_ZONE = "America/Santiago";
+
+const CHILE_DATE_FORMATTER = new Intl.DateTimeFormat("en-CA", {
+  timeZone: CHILE_TIME_ZONE,
+  year: "numeric",
+  month: "2-digit",
+  day: "2-digit",
+});
+
+// YYYY-MM-DD as seen in Chile (America/Santiago), DST included.
+function toChileDate(value = new Date()) {
+  const date = value instanceof Date ? value : new Date(value);
+  if (Number.isNaN(date.getTime())) return null;
+  return CHILE_DATE_FORMATTER.format(date);
+}
+
+module.exports = {
+  clamp,
+  average,
+  relativeAdvantage,
+  daysBetween,
+  toChileDate,
+  CHILE_TIME_ZONE,
+};
